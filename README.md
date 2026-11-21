@@ -59,3 +59,5 @@ O `ots info` mostra o que o carimbo contém:
 O limite, declarado: o `ots verify` completo exige um nó Bitcoin seu (`bitcoind` com RPC), porque confere a raiz Merkle do bloco no cabeçalho que o nó tem. Com `--no-bitcoin`, o `verify` sempre termina com falha; isso não é um "ok parcial". Sem nó, você pode pegar a altura do bloco que o `ots info` mostra e comparar a raiz Merkle num explorador de blocos, mas aí confia nesse explorador.
 
 Para ligar a linha ao ledger, use o verificador deste repositório (`produto_verifica.py`), com as provas de inclusão e de consistência descritas acima.
+
+**Desde 2026-11-21T14:00:08Z:** `ancoras_cl.tsv`, `ancoras_es.tsv` e `ancoras_au.tsv` trazem, no mesmo formato, as cabeças dos livros-razão de dados públicos do Chile (CEN), da Espanha (ESIOS/REE) e da Austrália (AEMO). A prova pública de cada um vale a partir do commit que traz a sua primeira linha. Esses arquivos foram coletados antes (19 e 20/11/2026), e a âncora não prova a data da coleta. As provas OpenTimestamps deles ficam em `ots/` com o nome do tsv na frente (`ots/ancoras_cl_<data>.txt`).
